@@ -8,11 +8,13 @@ const Choices = ({
   selectList,
   order,
   left,
+  right,
 }: {
   setSelectList: React.Dispatch<React.SetStateAction<number[]>>;
   selectList: any[];
   order: string;
   left: any;
+  right: any;
 }) => {
   const { changeNumber } = useChoices({ setSelectList });
 
@@ -21,7 +23,22 @@ const Choices = ({
       {new Array(5).fill(0).map((v, idx) =>
         idx != selectList[Number(order)] ? (
           <div slot={`${idx} ${order}`} onClick={changeNumber}>
-            {idx === 0 && <img src={left} />}
+            {idx === 0 && (
+              <img
+                className="opacity"
+                src={left}
+                slot={`${idx} ${order}`}
+                onClick={changeNumber}
+              />
+            )}
+            {idx === 4 && (
+              <img
+                className="opacity"
+                src={right}
+                slot={`${idx} ${order}`}
+                onClick={changeNumber}
+              />
+            )}
           </div>
         ) : (
           <div>
@@ -67,6 +84,9 @@ const ChoicesStyle = styled.div`
   img {
     width: 100%;
     height: 100%;
+  }
+  .opacity {
+    opacity: 0.4;
   }
 `;
 

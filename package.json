@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d dist",
+    "start": "nodemon --exec babel-node src/app.js",
+    "start:build": "npm run build && node dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/HighTone2023-TheRestOfUs/server/issues"
   },
-  "homepage": "https://github.com/HighTone2023-TheRestOfUs/server#readme"
+  "homepage": "https://github.com/HighTone2023-TheRestOfUs/server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
+  }
 }

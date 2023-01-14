@@ -9,4 +9,3 @@ export const Wrapper = styled.div`
     justify-content:space-around;
     align-items:center;
 `
-

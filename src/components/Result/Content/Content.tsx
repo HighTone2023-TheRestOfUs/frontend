@@ -27,7 +27,7 @@ const Content = () => {
         const state = location.state
         if (!state) navigator("/")
         else {
-            console.log(state)
+            console.log(state.selectedList)
         }
     },[])
 

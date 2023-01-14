@@ -14,6 +14,8 @@ import styled from "styled-components";
 import Netflix from "../assets/netflix.png";
 import Wacha from "../assets/wacha.png";
 import Messanger from "../assets/wacha.png";
+import { useLocation, useNavigate } from "react-router-dom";
+import Button from "../components/common/Button/Button";
 
 const array = [
   {
@@ -98,6 +100,17 @@ const Home = () => {
     console.log(selectList);
   }, [selectList]);
 
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  function onClick(){
+    navigate("/result",{
+      state:{
+        selectList
+      }
+    })
+  }
+
   return (
     <Div>
       <div className="height">
@@ -116,7 +129,9 @@ const Home = () => {
           </Item>
         ))}
       </div>
-      {/* <PhoneStyle src={Phone} alt="" /> */}
+      <Button onClick={onClick} backgroundColor="#395FE5" borderColor="#395FE5" title="" >
+          검사 시작하기
+      </Button>
     </Div>
   );
 };

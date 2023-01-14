@@ -3,7 +3,16 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import * as C from "./Content.style"
 
 import loading from "../../../assets/result/loading.svg"
-import img1 from "../../../assets/result/마술사.png"
+
+import img1 from "../../../assets/result/바리스타1.png"
+import img2 from "../../../assets/result/의사2.png"
+import img3 from "../../../assets/result/환자3.png"
+import img4 from "../../../assets/result/소믈리에4.png"
+import img5 from "../../../assets/result/마술사5.png"
+import img6 from "../../../assets/result/댄서6.png"
+import img7 from "../../../assets/result/알바7.png"
+import img8 from "../../../assets/result/코스플레이어8.png"
+
 
 const Content = () => {
     const [result,setResult] = useState({
@@ -17,7 +26,12 @@ const Content = () => {
     useLayoutEffect(() => {
         const state = location.state
         if (!state) navigator("/")
+        else {
+            console.log(state)
+        }
     },[])
+
+
 
     return (
         <C.Wrapper>

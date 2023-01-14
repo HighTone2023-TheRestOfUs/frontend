@@ -11,6 +11,9 @@ import KakaoWebtoonImg from "../assets/kakaoWebtoon.png";
 import MusinsaImg from "../assets/musinsa.png";
 import ZigzagImg from "../assets/zigzag.png";
 import styled from "styled-components";
+import Netflix from "../assets/netflix.png";
+import Wacha from "../assets/wacha.png";
+import Messanger from "../assets/wacha.png";
 
 const array = [
   {
@@ -33,7 +36,7 @@ const array = [
     leftImg: MusinsaImg,
     rightImg: ZigzagImg,
   },
-  { title: "내가 더 선호하는 OTT 앱은?", leftImg: KakaoImg, rightImg: TossImg },
+  { title: "내가 더 선호하는 OTT 앱은?", leftImg: Netflix, rightImg: Wacha },
   {
     title: "내가 더 선호하는 메신저 앱은?",
     leftImg: KakaoImg,

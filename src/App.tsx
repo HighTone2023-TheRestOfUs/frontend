@@ -12,7 +12,8 @@ function App() {
   // const location = useLocation();
   const [renderInfo, setRenderInfo] = useState({
     header: true,
-    element:routes[0].element
+    element:routes[0].element,
+    headerTitle:"기본헤더제목"
   });
 
   useLayoutEffect(() => {
@@ -22,13 +23,13 @@ function App() {
     if (temp === undefined) {
       temp = routes.find((element) => element.path === "*");
     }
-    if (temp) setRenderInfo({ header: temp.header, element:temp.element });
+    if (temp) setRenderInfo({ header: temp.header, element:temp.element,headerTitle:temp.headerTitle });
   }, [window.location.pathname]);
 
   return (
     <ThemeProvider theme={lightTheme} >
       <A.Wrapper>
-        {renderInfo.header && <Header/>}
+        {renderInfo.header && <Header title={renderInfo.headerTitle} />}
         <A.Core>
         {
           renderInfo.element

@@ -3,9 +3,6 @@ import Button from "../../components/Result/Button/Button";
 import * as R from "./Result.style"
 
 const Result = () => {
-
-
-
     return (
         <R.Wrapper>
             <Content/>

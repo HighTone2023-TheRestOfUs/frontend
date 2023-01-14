@@ -27,6 +27,8 @@ export const Img = styled.img`
 `
 
 export const Desc = styled.div`
+    width:80%;
+    word-break:keep-all;
     color:#646464;
 `
 

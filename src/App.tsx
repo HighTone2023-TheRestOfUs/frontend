@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./styles/theme";
 import Home from "./pages/Home";
 import Result from "./pages/result/Result";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   // const location = useLocation();
@@ -16,7 +17,7 @@ function App() {
     headerTitle:"기본헤더제목"
   });
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let temp = routes.find(
       (element) => element.path === window.location.pathname.split("/")[1]
     );

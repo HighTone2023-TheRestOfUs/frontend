@@ -1,12 +1,12 @@
 import Content from "../../components/Result/Content/Content";
-import Button from "../../components/Result/Button/Button";
+import Buttons from "../../components/Result/Buttons/Buttons";
 import * as R from "./Result.style"
 
 const Result = () => {
     return (
         <R.Wrapper>
             <Content/>
-            <Button/>
+            <Buttons/>
         </R.Wrapper>
     );
 };

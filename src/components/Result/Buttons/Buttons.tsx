@@ -13,6 +13,13 @@ const Buttons = () => {
             borderColor={theme.lightTheme.main}
             onClick={() => console.log("hi")}
             >공유하기</Button>
+            <Button
+            title='공유하기'
+            fontColor={theme.lightTheme.main}
+            backgroundColor={"white"}
+            borderColor={theme.lightTheme.main}
+            onClick={() => console.log("hi")}
+            >다시하기</Button>
         </B.Wrapper>
     )
 }

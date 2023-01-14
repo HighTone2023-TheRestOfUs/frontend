@@ -23,7 +23,7 @@ const Content = () => {
             <C.SubTitle>당신의 앱 사용 유형과 어울리는 직업은</C.SubTitle>
             <C.Title>{result.title}</C.Title>
             <C.Img src={img1}></C.Img>
-            <C.Desc>해림 : {result.desc}</C.Desc>
+            <C.Desc>해석 : {result.desc}</C.Desc>
         </C.Wrapper>
     );
 };

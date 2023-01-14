@@ -8,4 +8,5 @@ export const Wrapper = styled.div`
 
 export const Core = styled.div`
     width:100%;
+    max-width:500px;
 `

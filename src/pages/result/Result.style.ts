@@ -5,6 +5,4 @@ export const Wrapper = styled.div`
     height:200vh;
     display:flex;
     justify-content:center;
-
-    max-width:500px;
 `

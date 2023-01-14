@@ -3,6 +3,7 @@ import * as B from "./Button.style"
 
 const Button = ({
     backgroundColor,
+    fontColor,
     borderColor,
     title,
     onClick,
@@ -10,6 +11,7 @@ const Button = ({
     children
 }:{
     backgroundColor:string,
+    fontColor?:string,
     borderColor:string,
     title:string,
     onClick:()=>void,
@@ -17,7 +19,7 @@ const Button = ({
     children: ReactNode
 }) => {
     return (
-        <B.Wrapper placeholder={title} backgroundColor={backgroundColor} borderColor={borderColor} onClick={onClick} disabled={disabledToggle} >
+        <B.Wrapper placeholder={title} backgroundColor={backgroundColor} borderColor={borderColor} fontColor={fontColor} onClick={onClick} disabled={disabledToggle} >
             {children}
         </B.Wrapper>
     )

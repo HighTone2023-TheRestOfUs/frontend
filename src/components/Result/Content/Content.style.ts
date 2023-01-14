@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled,{keyframes } from "styled-components";
 
 export const Wrapper = styled.div`
     height:609px;
@@ -21,8 +21,34 @@ export const Title = styled.h2`
 
 export const Img = styled.img`
     width:300px;
+    height:400px;
+    object-fit:contain;
+    border-radius:16px;
 `
 
 export const Desc = styled.div`
     color:#646464;
+`
+
+const myAni = keyframes`
+0% {
+    transform:rotate(0deg);
+}
+100%{
+    transform:rotate(180deg);
+}
+`
+export const Loading = styled.div`
+    width:300px;
+    height:400px;
+    border-radius:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:3px solid gray;
+    >img{
+        width:60px;
+        height:60px;
+        animation: ${myAni} 1s infinite;
+    }
 `

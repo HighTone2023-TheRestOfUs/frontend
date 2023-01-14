@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 interface ButtonType{
-    backgroundColor:string;
-    borderColor:string;
+    backgroundColor?:string;
+    borderColor?:string;
+    fontColor?:string;
 }
 
 export const Wrapper = styled.button<ButtonType>`
@@ -14,7 +15,7 @@ export const Wrapper = styled.button<ButtonType>`
     align-items:center;
     background-color:${(props) => props.backgroundColor ?? props.theme.mainColor};
     border:${(props) => props.borderColor ?? props.theme.mainColor} solid 3px; 
-    color:white;
+    color:${(props) => props.fontColor ?? "white"};
     border-radius:12px;
     font-size:16px;
     font-weight:700;

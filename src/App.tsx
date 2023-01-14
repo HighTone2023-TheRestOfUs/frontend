@@ -17,7 +17,7 @@ function App() {
     headerTitle:"기본헤더제목"
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let temp = routes.find(
       (element) => element.path === window.location.pathname.split("/")[1]
     );
@@ -32,9 +32,17 @@ function App() {
       <A.Wrapper>
         {renderInfo.header && <Header title={renderInfo.headerTitle} />}
         <A.Core>
-        {
-          renderInfo.element
-        }
+          <Routes>
+          {routes.map((element) => {
+            return (
+              <Route
+                path={element.path}
+                element={element.element}
+                key={element.path}
+              />
+            );
+          })}
+        </Routes>
         </A.Core>
       </A.Wrapper>
     </ThemeProvider>

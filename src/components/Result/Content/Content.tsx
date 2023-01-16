@@ -2,6 +2,8 @@ import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import * as C from "./Content.style"
 
+import axios from "axios"
+
 import loading from "../../../assets/result/loading.svg"
 
 import img1 from "../../../assets/result/바리스타1.png"
@@ -31,11 +33,18 @@ const Content = () => {
         if (!state) navigator("/")
         else {
             const selectList = state.selectList
+
+
+
             const resultValue = {
                 simple:0,
                 people:0,
                 function:0,
             }
+
+            axios.post("http://localhost:8000/api/stats/add",{
+                    arr:selectList
+                })
 
             selectList.forEach((e:number,idx:number) => {
                 // 3은 포함 하지 않는다
